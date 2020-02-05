@@ -30,7 +30,7 @@ docker run -d \
     -e RABBITMQ_NODENAME="rabbitmq2" \
     --volume=(pwd)/rabbitmq.config:/etc/rabbitmq/rabbitmq.config \
     --volume=(pwd)/definitions.json:/etc/rabbitmq/definitions.json \
-    --link="rabbit1:rabbit1" \
+    --link="rabbitmq1:rabbitmq1" \
     rabbitmq:3-management
 ```
 
@@ -43,8 +43,8 @@ docker run -d \
     -e RABBITMQ_NODENAME="rabbitmq3" \
     --volume=(pwd)/rabbitmq.config:/etc/rabbitmq/rabbitmq.config \
     --volume=(pwd)/definitions.json:/etc/rabbitmq/definitions.json \
-    --link="rabbit1:rabbit1" \
-    --link="rabbit2:rabbit2" \
+    --link="rabbitmq1:rabbitmq1" \
+    --link="rabbitmq2:rabbitmq2" \
     rabbitmq:3-management
 ```
 
